@@ -36,6 +36,18 @@ export default class EventService {
         return sortedDates[0];
     }
 
+    getLastEvent() {
+        let evts = this.getEvents()
+        let dates = [];
+        evts.forEach(function (event) {
+            dates.push(event.startTime)
+            return dates;
+        })
+        let sortedDates = dates.sort();
+        return sortedDates[2];
+    }
+
+
     getLongestEvent() {
         return null; //TODO
     }

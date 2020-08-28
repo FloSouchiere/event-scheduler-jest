@@ -38,10 +38,10 @@ describe("Event Service", () => {
         expect(eventService.getFirstEvent()).toStrictEqual(new Date('2018-12-17T03:24:00'));
     });
 
-    // test('getLastEvent shall return the first', async  () => {
-    //     let eventService = new EventService(new EventRepository());
-    //     expect(eventService.getLastEvent()).toStrictEqual(new Date('2018-12-17T02:24:00.000Z'));
-    // });
+    test('getLastEvent shall return the first', async  () => {
+        let eventService = new EventService(new EventRepository());
+        expect(eventService.getLastEvent()).toStrictEqual(new Date('2020-04-01T09:00:00'));
+    });
 
 
 });
