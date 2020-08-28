@@ -1,4 +1,3 @@
-
 import EventRepository from "./repository";
 import Event from "./models";
 
@@ -26,34 +25,21 @@ export default class EventService {
         return this._eventRepository.getAll();
     }
 
-    /**
-     * Get the first upcomming event
-     * @return {null | Event}
-     */
     getFirstEvent() {
-        return null; //TODO
+        let evts = this.getEvents()
+        let dates = [];
+        evts.forEach(function (event) {
+            dates.push(event.startTime)
+            return dates;
+        })
+        let sortedDates = dates.sort();
+        return sortedDates[0];
     }
 
-    /**
-     * Get the last upcomming event
-     * @return {null | Event}
-     */
-    getLastEvent() {
-        return null; //TODO
-    }
-
-    /**
-     * Get the longest event
-     * @return {null | Event}
-     */
     getLongestEvent() {
         return null; //TODO
     }
 
-    /**
-     * get the shortest event
-     * @return {null | Event}
-     */
     getShortestEvent() {
         return null; //TODO
     }
@@ -72,30 +58,19 @@ export default class EventService {
     }
 
     // A implementer en TDD
-    /**
-     *
-     * @param title
-     * @return {null | Event}
-     */
+
     getEventByTitle(title) {
         return null
     }
 
     // A implementer en TDD
-    /**
-     *
-     * @param {Date} time
-     */
+
     isLocationAvailable(time) {
     }
 
-    /**
-     * Get current events
-     * @return {Event[]}
-     */
     getCurrentEvents() {
         let now = Date.now();
         return this.hasEventOn(new Date(now));
     }
-    
+
 }
