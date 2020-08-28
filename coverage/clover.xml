@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1598619610047" clover="3.2.0">
-  <project timestamp="1598619610047" name="All files">
+<coverage generated="1598620148754" clover="3.2.0">
+  <project timestamp="1598620148754" name="All files">
     <metrics statements="60" coveredstatements="36" conditionals="2" coveredconditionals="0" methods="38" coveredmethods="16" elements="100" coveredelements="52" complexity="0" loc="60" ncloc="60" packages="1" files="5" classes="5"/>
     <file name="controller.js" path="/home/flo/Documents/event-scheduler-jest/src/controller.js">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
